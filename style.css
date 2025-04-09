@@ -1,0 +1,530 @@
+body {
+    background-color: rgb(144, 146, 173);
+    font-family: 'Arial', serif;
+    height: auto;
+    width: auto;
+    display: grid;
+    height: 100%;
+    grid-template-rows: auto auto auto;
+    margin: 0.5% 1%;
+}
+
+/* nav */
+
+nav {
+    background-color: rgb(255, 255, 255);
+    height: 5vh;
+    border-radius: 10px;
+}
+
+.unselected-btn {
+    background-color: #ffff;
+    border: 0;
+    height: 100%;
+    width: 8vw;
+    font-size: large;
+    cursor: pointer;
+    margin: 0 auto;
+}
+.unselected-btn:hover {
+    border: 3px solid rgb(136, 141, 182);
+    background-color: rgb(239, 242, 255);
+    transition-duration: 0.1s;
+}
+
+.selected-btn {
+    border: 0;
+    height: 100%;
+    width: 8vw;
+    font-size: large;
+    cursor: pointer;
+    margin: 0 auto;
+    background-color: #1D2047;
+    color: #ffff;
+}
+
+/* header */
+
+header {
+    background-color: rgb(255, 255, 255);
+    height: 10vh;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.site-heading {
+    font-weight: 800;
+    font-size: 40px;
+    margin: 1vh 1vw;
+    transition-duration: 0.3s;
+}
+.site-heading:hover {
+  font-size: 45px;
+  transition-delay: 0.1s;
+  transition-duration: 0.3s;
+}
+
+/* main */
+
+main {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.article-heading {
+    background-color: #1D2047;
+    color: #ffff;
+    font-weight: 800;
+    font-size: 35px;
+    margin: 0;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    padding-left: 1vw;
+    border-radius: 10px;
+}
+article {
+    background-color: rgb(255, 255, 255);
+    height: 70vh;
+    width: 70%;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+section {
+    padding: 10px;
+}
+.section-content {
+    text-align: left;
+}
+
+aside {
+    background-color: rgb(255, 255, 255);
+    width: 30%;
+    height: 70vh;
+    border-radius: 10px;
+}
+
+
+
+form {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 20% 20% 35% 25%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 2vh 1vw;
+}
+
+.select-gf {
+  font-size: 16px;
+  color: #1D2047;
+}
+
+/* -- фон свитча -- */
+.button-cover {
+  border-color: #5d5d69;
+  border-radius: 10px;
+  background-color: #EBEBFB;
+  padding-bottom: 2.5vh;
+}
+.button {
+  position: relative;
+  width: 100%;
+  height: 2.5vh;
+}
+/* ----------------- */
+
+.checkbox {
+  position: relative;
+  width: 100%;
+  height: 5vh;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+  margin: 0 auto;
+}
+
+.knobs {
+  z-index: 2;
+  color: #232755;
+}
+
+.layer {
+  width: 100%;
+  background-color: #000000;
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+
+/* свич */
+
+#button-10 .knobs:before,
+#button-10 .knobs:after,
+#button-10 .knobs span {
+  position: absolute;
+  top: 4px;
+  width: 13vw;
+  height: 80%;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  padding: 1vh 0;
+  transition: 0.3s ease all;
+  color: #232755;
+}
+
+#button-10 .knobs:before {
+  content: "";
+  left: 0.4vw;
+  background-color: #ffffff; 
+  color: #232755;
+  border-radius: 10px;
+}
+
+#button-10 .knobs:after {
+  content: "Единоразово";
+  right: 0.2vw;
+}
+
+#button-10 .knobs span {
+  display: inline-block;
+  left: 0.2vw;
+  z-index: 1;
+}
+
+#button-10 .checkbox:checked + .knobs span {
+  color: #000000;
+}
+
+#button-10 .checkbox:checked + .knobs:before {
+  left: 13.5vw;
+}
+
+/* Select amount */
+
+.cash-amount-title {
+  font-size: 16px;
+  color: #1D2047;
+  
+}
+
+.btns {
+  display: flex;
+  justify-content: space-around;
+}
+.amount-btn {
+  cursor: pointer;
+  padding: 0.2vw;
+  border: 0.1vw solid #B4B4BC;
+  border-radius: 0.2vw;
+  height: 4.5vh;
+  width: 4vw;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1D2047; 
+}
+.amount-btn:hover {
+  background-color: #2c316b59;
+}
+.active  {
+  background-color: #1D2047 !important;
+  color: #ffffff;
+}
+
+.checkmark {
+  margin: 1.5vh 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+}
+.mark {
+  height: 3vh;
+  width: 1.5vw;
+  margin: 0.5vh 1vw 0.5vh 0.2vw;
+  cursor: pointer;
+}
+.mark:hover {
+  height: 3.5vh;
+  width: 1.8vw;
+  transition-duration: 0.2s;
+}
+label {
+  margin: 0.5vh 0;
+  font-weight: 600;
+  color: #232653;
+  line-height: 150%;
+  font-size: 14px;
+  align-content: center;
+}
+
+.inputs {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  margin-top: 1vh;
+}
+input {
+  width: 92%;
+  height: 5.5vh;
+  margin-bottom: 2vh;
+  font-size: 18px;
+  padding: 0 0.7vw;
+}
+input:hover {
+  background-color: #2c316b10;
+}
+input::-webkit-input-placeholder {
+  font-size: 18px;
+  color: #B4B4BC;
+}
+.honor {
+  color: #407ae7;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+
+.submit {
+  margin-top: 3vh;  
+}
+.donate-btn {
+  width: 100%;
+  height: 5.5vh;
+  cursor: pointer;
+  border: none;
+  background-color: #1D2047;
+  color: #ffffff;  
+  border-radius: 5px;
+  font-size: 20px;
+}
+.donate-btn:hover {
+  background-color: #2b3068;
+  transition-duration: 0.3s;
+}
+.pp-warn {
+  margin: 1.7vh 0 0 0;
+  font-size: 13px;
+}
+
+/* footer */
+
+footer {
+    background-color: rgb(255, 255, 255);
+    height: 5vh;
+    border-radius: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.site-info {
+  display: flex;
+}
+
+#about-company {
+    border-right: 2px solid black;
+    padding: 0 13px;
+    font-size: 17px;
+    color: #383838;
+}
+
+#site-map {
+    padding: 0 13px;
+    font-size: 17px;
+    color: #383838;
+}
+       
+#exit-a {
+    border-right: 2px solid black;
+    padding: 0 13px;
+    font-size: 17px;
+    color: #383838;
+}
+       
+#edit-a {
+    padding: 0 13px;
+    font-size: 17px;
+    color: #383838;
+}
+
+#about-company:hover {
+    color: rgb(0, 38, 255);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#site-map:hover  {
+    color: rgb(0, 38, 255);
+    text-decoration: underline;
+    cursor: pointer;
+}
+       
+#exit-a:hover  {
+    color: rgb(0, 38, 255);
+    text-decoration: underline;
+    cursor: pointer;
+}
+       
+#edit-a:hover  {
+    color: rgb(0, 38, 255);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 1700px) {
+  .checkmark {
+    margin: 1vh 0.2vw;
+  }
+   #name {
+    margin-bottom: 0.5vh;
+  }
+  #email {
+    margin-bottom: 0.5vh;
+  }
+  .amount-btn {
+    height: 4vh;
+    width: 3.5vw;
+  }
+  .cash-amount {
+    margin-bottom: 1.5vh;
+  }
+  .inputs {
+    margin: 0;
+  }
+}
+
+
+@media screen and (max-width: 1500px) {
+  .checkmark {
+    margin: 1vh 0.2vw;
+  }
+   #name {
+    margin-bottom: 0.5vh;
+  }
+  #email {
+    margin-bottom: 0.5vh;
+  }
+  .amount-btn {
+    height: 4vh;
+    width: 3.5vw;
+    font-size: 15px;
+  }
+  .unselected-btn {
+    width: 9vw;
+  }
+  .selected-btn {
+    width: 9vw;
+  }
+  .donate-btn {
+    font-size: 18px;
+  }
+
+  footer {
+    height: 4.5vh;
+  }
+  .site-heading {
+    font-size: 35px;
+  }
+  .site-heading:hover {
+    font-size: 40px;
+  }
+  .article-heading {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  nav {
+    height: 6vh;
+  }
+  .unselected-btn {
+    width: 10vw;
+    font-size: 15px;
+  }
+  .selected-btn {
+    width: 10vw;
+    font-size: 15px;
+  }
+
+  header {
+    height: 9vh;
+    margin: 15px 0;
+  }
+  .site-heading {
+    font-size: 30px;
+    margin: 1vh 1vw;
+  }
+  .site-heading:hover {
+    font-size: 35px;
+  }
+
+  main {
+    margin-bottom: 15px;
+  }
+  .article-heading {
+    font-size: 25px;
+    height: 9vh;
+  }
+  article {
+    margin-right: 15px;
+  }
+  .section-content {
+    font-size: 14px;
+  }
+
+  .select-gf {
+    font-size: 14px;
+  }
+  #button-10 .knobs:before,
+  #button-10 .knobs:after,
+  #button-10 .knobs span {
+    font-size: 15px;
+  }
+
+  .cash-amount-title {
+    font-size: 14px;
+  }
+  label {
+    font-size: 12px;
+  }
+  .honor {
+    font-size: 12px;
+  }
+  .pp-warn {
+    font-size: 10px;
+  }
+  input {
+    height: 5vh;
+  }
+  input::-webkit-input-placeholder {
+    font-size: 15px;
+  }
+  .amount-btn {
+    font-size: 14px;
+  }
+
+  #about-company {
+    font-size: 15px;
+  }
+
+  #site-map {
+    font-size: 15px;
+  }
+       
+  #exit-a {
+    font-size: 15px;
+  }
+       
+  #edit-a {
+    font-size: 15px;
+  }
+}
